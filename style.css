@@ -1,0 +1,93 @@
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+}
+.hero-bg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.typing-cursor::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Professional Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-bar-inner {
+  width: 0%;
+  transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+}
+
+/* Hover Glow Effects */
+.service-card {
+  transition: all 0.4s ease;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link-underline:hover::after {
+  width: 100%;
+}
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.skill-badge {
+  /* تأكد إن الأنيميشن بتاع الـ reveal شغال عليها */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
