@@ -1,6 +1,6 @@
 // Typing Animation Logic
 const textElement = document.getElementById("typing-text");
-const words = ["Mo'men Ahmed", "Frontend Developer"];
+const words = ["Mo'men Ahmed", "A Frontend Developer"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
